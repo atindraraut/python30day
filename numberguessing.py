@@ -1,21 +1,22 @@
 import random
 import math
 # Taking Inputs
-lower = int(input("Emter Lower bound:- ")) 
+lower = int(input("Enter the lower limit: ")) 
 
 # Taking Inputs
-upper = int(input("Enter Upper bound:- ")) 
+upper = int(input("Enter the upper limit: ")) 
 
 # generating random number between
-# the lower and upper
+# the lower and upper are the arguments
+
 x = random.randint(lower, upper)
 print("\n\tYou've only ", round(math.log(upper - lower + 1, 2))," chances to guess the integer!\n")
 
-# Initializing the number of guesses.
+# count will start with zero every time
 count = 0
 
-# for calculation of minimum number of
-# guesses depends upon range
+""" for calculation of minimum number of
+ guesses depends upon range"""
 while count < math.log(upper - lower + 1, 2):
 	count += 1
 	
@@ -32,10 +33,9 @@ while count < math.log(upper - lower + 1, 2):
 	elif x < guess:
 	    print("You Guessed too high!")
 
-# If Guessing is more than required guesses, 
-# shows this output.
+# If  you guess more the the allotted no of times
+ 
 if count >= math.log(upper - lower + 1, 2):
     print("\nThe number is %d"%x)
     print("\tBetter Luck Next time!")
 
-# Better to use This source Code on pycharm!
