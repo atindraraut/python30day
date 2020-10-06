@@ -1,3 +1,4 @@
+#this is the first programme of 30 days challenge
 import random
 import math
 # Taking Inputs
